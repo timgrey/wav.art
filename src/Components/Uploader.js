@@ -2,23 +2,28 @@ import React, { Component } from 'react'
 import { withCanvasContext } from '../Contexts/CanvasContext'
 import styled from 'styled-components'
 
-const Upload = styled.input`
-  & label {
-    font-size: 1.25em;
-    font-weight: 700;
-    color: white;
-    background-color: black;
+const UploadLabel = styled.label`
+    font-size: 20px;
+    color: #000A;
     display: inline-block;
-  }
+    line-height: 0;
+    font-weight: bolder;
+    margin-right: 8px;
+    transform: translateY(1px);
 `
 
 class Uploader extends Component {
   render() {
     return (
+  
       <form>
-        {/* <Upload name="file" onChange={this.props.handleFileUpload} type="file" ref={this.props.uploader} /> */}
-        <input name="file" onChange={this.props.handleFileUpload} type="file" ref={this.props.uploader} />
-        <label>Choose a file</label>
+        <UploadLabel>Upload A Song:</UploadLabel>
+        <input 
+          onChange={this.props.handleFileUpload} 
+          type="file" 
+          ref={this.props.uploader}
+          accept="audio/*"
+        />
       </form>
     )
   }

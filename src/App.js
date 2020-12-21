@@ -2,14 +2,12 @@ import React, { Component } from 'react'
 
 import './App.css'
 import Canvas from './Components/Canvas'
-import AudioPlayer from './Components/AudioPlayer'
 import CanvasContextProvider from './Contexts/CanvasContext'
-import SideBar from './Components/SideBar'
+import BottomBar from './Components/BottomBar'
 import styled from 'styled-components'
 import background from './Assets/background.jpeg'
 
-class App extends Component {
-  Content = styled.div`
+const Content = styled.div`
     box-sizing: border-box;
     width: 100vw;
     height: 100vh;
@@ -24,15 +22,15 @@ class App extends Component {
     background-position: center center;
     background-repeat: no-repeat;
     overflow: hidden;
-  `
+`
+
+class App extends Component {
   render() {
-    const Content = this.Content;
     return (
       <CanvasContextProvider>
         <Content>
-          <SideBar />
           <Canvas />
-          <AudioPlayer />
+          <BottomBar />
         </Content>
       </CanvasContextProvider>
     )
