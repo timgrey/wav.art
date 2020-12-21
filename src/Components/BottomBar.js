@@ -7,7 +7,7 @@ const BottomBarWrapper = styled.div`
   position: absolute;
   left: 50%;
   bottom: 50%;
-  transform: translate(-50%, 450px);
+  transform: translate(-50%, calc(-53% + 450px));
   background: whitesmoke;
   width: 1024px;
   height: 50px;

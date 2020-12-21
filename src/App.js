@@ -1,6 +1,4 @@
 import React, { Component } from 'react'
-
-import './App.css'
 import Canvas from './Components/Canvas'
 import CanvasContextProvider from './Contexts/CanvasContext'
 import BottomBar from './Components/BottomBar'
@@ -13,10 +11,6 @@ const Content = styled.div`
     height: 100vh;
     border-color: #252525;
     border-style: solid;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
     background-image: url(${background});
     background-size: cover;
     background-position: center center;
